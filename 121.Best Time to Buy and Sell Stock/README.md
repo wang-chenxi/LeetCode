@@ -30,6 +30,7 @@ Explanation: In this case, no transactions are done and the max profit = 0.
 0 <= prices[i] <= 104
 
 # My solution
+```
 /**
  * @param {number[]} prices
  * @return {number}
@@ -58,3 +59,4 @@ if(prices[i]-buy>max){
     }}
 return max;
 }
+```

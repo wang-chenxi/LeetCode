@@ -40,7 +40,7 @@ var maxProfit = function(prices) {
     var sell = prices[1];
     var max =0;
     
-    //below solution will return an error since it's i^2
+    //below solution will get TLE due to time complexity O(N^2)
     // for(i=0;i<prices.length-1;i++){
     //     for(j=i+1;j<prices.length;j++){
     //         if(prices[j]-prices[i]>max){

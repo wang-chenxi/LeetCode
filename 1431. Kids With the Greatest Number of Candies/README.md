@@ -48,16 +48,7 @@ Kid 5 has 3 candies and if he or she receives at least 2 extra candies will have
 // OJ: https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/
 // Author: github.com/wang-chenxi
 var kidsWithCandies = function(candies, extraCandies) {
-    var results =[];
     var highest = Math.max.apply(null, candies);
-    for(i=0;i<candies.length;i++){
-        var sum = candies[i] + extraCandies;
-        if(sum<highest){
-            results.push(false);
-        }else{
-            results.push(true);
-        }             
-    }
-    return results;
+    return candies.map(c => c + extraCandies >= highest)
 };
 ```

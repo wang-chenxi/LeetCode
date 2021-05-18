@@ -69,3 +69,36 @@ class Solution {
 }
 
 ```
+
+## Solution 2.
+
+```JAVA
+
+class Solution {
+    public int maxProduct(int[] nums) {
+//[2,3,-2,4]
+// 2:2,2,2=>(2,2);
+// 3:6,6,3=>(6,3);
+//-2:-6,-12,-2=>(-2,-12);
+// 4:-8,-48,4 => (4,-48); 
+   //if the array is greater than a single element     
+   if(nums.length==0){
+       return 0;
+   } 
+   //avoid potential troubles     
+   int maxProduct = nums[0];
+   int min = nums[0];
+   int max = nums[0];     
+   for(int m = 1; m<nums.length;m++){
+       int n = nums[m];
+       int a = min *n;
+       int b = max *n;
+       min = Math.min(Math.min(a,b),n);
+       max = Math.max(Math.max(a,b),n);
+       maxProduct = Math.max(max, maxProduct);
+   } 
+   return maxProduct;     
+    }
+}
+
+```

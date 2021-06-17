@@ -33,10 +33,57 @@
 * [4Sum (Medium)](https://leetcode.com/problems/4sum/)
 * [3Sum Smaller (Medium)](https://leetcode.com/problems/3sum-smaller/)
 
+## Testcases
+
+[-1,0,1,2,-1,-4]
+[]
+[0]
+
 ## Solution 1.
 
 ```JAVA
 
-
+// OJ: https://leetcode.com/problems/3sum/
+// Author: github.com/wang-chenxi
+// Time: O()
+// Space: O()
+class Solution {
+    public List<List<Integer>> threeSum(int[] nums) {
+        List<List<Integer>> results = new ArrayList<List<Integer>>();
+        if(nums.length<3){
+            return results;
+        }
+        Arrays.sort(nums);
+        for(int i = 0; i<nums.length-2;i++){
+            if(i >0 && nums[i] == nums[i-1]){
+                continue;
+            }
+            int left = i+1;
+            int right = nums.length-1;
+            int sum = 0 - nums[i];
+            Set<Integer> lefts = new HashSet<>();
+            while(left<right){
+                if(lefts.contains(nums[left])){
+                    left ++;
+                }
+                if(nums[left] + nums[right] == sum){
+                    List<Integer> result = new ArrayList<Integer>();
+                    result.add(nums[i]);
+                    result.add(nums[left]);
+                    result.add(nums[right]);
+                 results.add(result);   
+                    lefts.add(nums[left]);
+                    left ++;
+                    right --;
+                }else if(nums[left] +nums[right] <sum){
+                    left ++;
+                }else{
+                    right --;
+                }
+            }
+        }
+        return results;
+    }
+}
 
 ```

@@ -60,7 +60,7 @@
 
 // OJ: https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
 // Author: github.com/wang-chenxi
-// Time: O(log(n))
+// Time: O(n)
 // Space: O(1)
 class Solution {
     public int findMin(int[] nums) {
@@ -83,6 +83,31 @@ class Solution {
             }
         }
         return nums[0];
+    }
+}
+
+```
+
+## Solution 2.
+```JAVA
+
+// OJ: https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
+// Author: github.com/wang-chenxi
+// Time: O(log(n))
+// Space: O(1)
+class Solution {
+    public int findMin(int[] nums) {
+        int left =0;
+        int right = nums.length -1;
+        while(left <right){
+            int mid = (left +right)/2;
+            if(nums[mid] >nums[right]){
+                left = mid +1;
+            }else{
+                right = mid;
+            }
+        }
+        return nums[left];
     }
 }
 

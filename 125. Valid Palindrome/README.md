@@ -59,6 +59,7 @@ class Solution {
         int l = 0;
         int r = s.length()-1;
         while(l<r){
+        // for (int left = 0, right = s.length() - 1; left < right; left++, right--) => instead of the while loop   
             while((!Character.isLetterOrDigit(s.charAt(l)))&&l<r){
                 l++;
             }

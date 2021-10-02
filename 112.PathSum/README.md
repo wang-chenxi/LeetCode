@@ -45,6 +45,21 @@
 
 ## Solution 1.
 
-```cpp
-
+```js
+// OJ: https://leetcode.com/problems/path-sum/
+// Author: github.com/wang-chenxi
+// Time: O()
+// Space: O()
+var check = function (root, targetSum, pathSum) {
+  if (!root) return false;
+  if (!root.left && !root.right) return targetSum == root.val + pathSum;
+  pathSum += root.val;
+  return (
+    hasPathSum(root.left, targetSum, pathSum) ||
+    hasPathSum(root.right, targetSum, pathSum)
+  );
+};
+var hasPathSum = function (root, targetSum) {
+  return check(root, targetSum, 0);
+};
 ```

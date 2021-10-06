@@ -46,4 +46,28 @@
 
 ```JS
 
+var levelOrder = function(root) {
+    var result = []
+    if(!root){
+        return result
+    }
+    var temp=[root]
+    while(temp.length){
+        var count = temp.length
+        var level = []
+        for(var i = 0; i<count;i++){
+            node = temp.shift()
+            if(node.left != null){
+                temp.push(node.left)
+            }
+            if(node.right != null){
+                temp.push(node.right)
+            }
+            level.push(node.val)
+        }
+     result.push(level)
+    }
+ return result
+};
+
 ```

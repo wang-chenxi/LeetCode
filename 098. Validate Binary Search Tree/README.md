@@ -46,75 +46,17 @@
 
 // OJ: https://leetcode.com/problems/validate-binary-search-tree/
 // Author: github.com/wang-chenxi
-// Time: O()
-// Space: O()
-}
-/**
- * Definition for a binary tree node.
- * function TreeNode(val, left, right) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.left = (left===undefined ? null : left)
- *     this.right = (right===undefined ? null : right)
- * }
- */
-/**
- * @param {TreeNode} root
- * @return {boolean}
- */
-// OJ: https://leetcode.com/problems/validate-binary-search-tree/
-// Author: github.com/wang-chenxi
-// Time: O()
-// Space: O()
-}
-/**
- * Definition for a binary tree node.
- * function TreeNode(val, left, right) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.left = (left===undefined ? null : left)
- *     this.right = (right===undefined ? null : right)
- * }
- */
-/**
- * @param {TreeNode} root
- * @return {boolean}
- */
-var helper = function(root,count) {
-    count ++;
-    console.log(count)
+// Time: O(n)
+// Space: O(h)
+
+var helper = function(root,leftBound,rightBound) {
     if(!root) return true;
-    if(root.left != null){
-        if(root.left.val>= root.val){
-            return false;
-        }
-        if(count == 1&& root.right ==null){
-            return true;
-        }
-         if(root.left.left == null && root.left.right ==null){
-        if(root.right ==null || root.right.left != null || root.right.right != null)
-            return false
-    }
-    }
-    if(root.right !=null){
-        console.log("test right")
-        if(root.right.val <= root.val){
-            console.log("the right val ")
-            return false;
-        }
-        if(count ==1&&root.left==null){
-            return true;
-        }
-         if(root.right.left == null && root.right.right ==null){
-        if(root.left == null || root.left.left != null || root.left.right != null)
-            return false
-    }
-    }
-    return helper(root.left,count) || helper(root.right,count)
+    if(root.val<=leftBound || root.val>=rightBound) return false
+    return helper(root.left,leftBound,root.val) && helper(root.right,root.val,rightBound)
 };
 
-
-
-var isValidBST=(root,count = 0)=>{
-    return helper(root, count)
+var isValidBST=(root)=>{
+    return helper(root, -Infinity, Infinity)
 }
 
 ```

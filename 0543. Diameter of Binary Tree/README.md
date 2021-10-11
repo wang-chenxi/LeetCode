@@ -37,6 +37,37 @@
 
 ## Solution 1.
 
-```cpp
+```JS
+
+// OJ: https://leetcode.com/problems/diameter-of-binary-tree/
+// Author: github.com/wang-chenxi
+// Time: O()
+// Space: O()
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {number}
+ */
+var maxDepth = function(root) {
+    if(!root) return 0
+    var leftDepth = maxDepth(root.left)
+    var rightDepth = maxDepth(root.right)
+    return Math.max(leftDepth,rightDepth)+1
+}
+var diameterOfBinaryTree = function(root) {
+if (!root) return 0;
+    var leftDp = maxDepth(root.left)
+    var rightDp = maxDepth(root.right)
+    var leftDm = diameterOfBinaryTree(root.left)
+    var rightDm = diameterOfBinaryTree(root.right)
+    return Math.max(leftDp + rightDp, Math.max(leftDm,rightDm))
+};
 
 ```

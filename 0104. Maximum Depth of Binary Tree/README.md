@@ -53,8 +53,8 @@
 
 // OJ: https://leetcode.com/problems/maximum-depth-of-binary-tree/
 // Author: github.com/wang-chenxi
-// Time: O()
-// Space: O()
+// Time: O(n)
+// Space: O(h)
 /**
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {

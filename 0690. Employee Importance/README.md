@@ -82,10 +82,9 @@ var GetImportance = function(employees, id) {
     var total = 0
     while(employee.length>0){
             total += employee[0].importance;
-        console.log(employee[0].importance)
-            for(var sub in employee[0].subordinates){
+            employee[0].subordinates.forEach(sub => {
                 employee.push(importanceMap.get(sub))
-            }
+            })
         employee.shift()
         }
         return total

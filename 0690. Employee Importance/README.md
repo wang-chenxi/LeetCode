@@ -49,6 +49,13 @@ Thus, the total importance value of employee 5 is -3.
 
 - [Nested List Weight Sum (Medium)](https://leetcode.com/problems/nested-list-weight-sum/)
 
+## Testcases
+
+[[1,5,[2,3]],[2,3,[]],[3,3,[]]]
+1
+[[1,2,[5]],[5,-3,[]]]
+5
+
 ## Solution 1.
 
 ```JS

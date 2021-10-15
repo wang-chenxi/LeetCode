@@ -62,7 +62,7 @@ Thus, the total importance value of employee 5 is -3.
 
 // OJ: https://leetcode.com/problems/employee-importance/
 // Author: github.com/wang-chenxi
-// Time: O()
+// Time: O(n)
 // Space: O()
 /**
  * Definition for Employee.
@@ -78,19 +78,17 @@ Thus, the total importance value of employee 5 is -3.
  * @return {number}
  */
 var GetImportance = function(employees, id) {
-    var importanceMap = new Map();
-    var employee=[];
+    var map = new Map();
+
     for(var i = 0;i<employees.length;i++){
-        importanceMap.set(employees[i].id,employees[i])
-        if(employees[i].id==id){
-            employee.push(employees[i])
-        }
+        map.set(employees[i].id,employees[i])
     }
+    var employee=[map.get(id)]
     var total = 0
     while(employee.length>0){
             total += employee[0].importance;
             employee[0].subordinates.forEach(sub => {
-                employee.push(importanceMap.get(sub))
+                employee.push(map.get(sub))
             })
         employee.shift()
         }

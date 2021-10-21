@@ -47,6 +47,40 @@
 
 ## Solution 1.
 
-```cpp
+```JS
+
+// OJ: https://leetcode.com/problems/path-sum-ii/
+// Author: github.com/wang-chenxi
+// Time: O()
+// Space: O()
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @param {number} targetSum
+ * @return {number[][]}
+ */
+var pathSum = function(root, targetSum, sum=0,pathes=[],path=[]) {
+    if(!root)return pathes//=> pathes is the final output of the function
+    sum += root.val
+    path.push(root.val)
+    if(root.left==null&&root.right==null){
+        if (targetSum == sum){
+            pathes.push([...path])//=> cannot use pathes.push(path)directly since it will use push the current elements
+        }
+        path.pop()//=> need to reset path everytime
+        return pathes//=> pathes is the final output of the function
+    }
+    pathSum(root.left,targetSum,sum,pathes,path)// shouldn't return here
+    pathSum(root.right,targetSum,sum,pathes,path)
+    path.pop()//=> need to reset path everytime
+    return pathes//=> pathes is the final output of the function
+};
 
 ```

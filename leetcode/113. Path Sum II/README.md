@@ -51,21 +51,8 @@
 
 // OJ: https://leetcode.com/problems/path-sum-ii/
 // Author: github.com/wang-chenxi
-// Time: O()
-// Space: O()
-/**
- * Definition for a binary tree node.
- * function TreeNode(val, left, right) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.left = (left===undefined ? null : left)
- *     this.right = (right===undefined ? null : right)
- * }
- */
-/**
- * @param {TreeNode} root
- * @param {number} targetSum
- * @return {number[][]}
- */
+// Time: O(N)
+// Space: O(H)
 var pathSum = function(root, targetSum, sum=0,pathes=[],path=[]) {
     if(!root)return pathes//=> pathes is the final output of the function
     sum += root.val
@@ -83,4 +70,31 @@ var pathSum = function(root, targetSum, sum=0,pathes=[],path=[]) {
     return pathes//=> pathes is the final output of the function
 };
 
+```
+
+```js
+// OJ: https://leetcode.com/problems/path-sum-ii/
+// Author: github.com/wang-chenxi
+// Time: O(N)
+// Space: O(H)
+var pathSum = function (root, targetSum) {
+  var ans = [],
+    path = [],
+    sum = 0;
+  function dfs(node) {
+    if (!node) return;
+    sum += node.val;
+    path.push(node.val);
+    if (node.left === null && node.right === null) {
+      if (sum === targetSum) ans.push([...path]);
+    } else {
+      dfs(node.left);
+      dfs(node.right);
+    }
+    path.pop();
+    sum -= node.val;
+  }
+  dfs(root);
+  return ans;
+};
 ```

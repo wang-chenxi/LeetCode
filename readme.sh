@@ -23,6 +23,8 @@ Author: [https://github.com/wang-chenxi](https://github.com/wang-chenxi)
 
 My JS/Java Code for LeetCode OJ.
 
+The README is updated weekly. 
+
 Please give this repo a :star: if it inspires you. Thanks. :blush:
 
 😩 Hate manually copy & pasting the example testcases when solving LeetCode problems?  

@@ -98,3 +98,47 @@ var pathSum = function (root, targetSum) {
   return ans;
 };
 ```
+
+```JS
+
+// OJ: https://leetcode.com/problems/minesweeper/
+// Author: github.com/wang-chenxi
+// Time: O()
+// Space: O()
+/**
+ * @param {character[][]} board
+ * @param {number[]} click
+ * @return {character[][]}
+ */
+var updateBoard = function(board, click) {
+    var M = board.length, N = board[0].length;
+    if(board[click[0]][click[1]]=='M'){
+        board[click[0]][click[1]]='X'
+        return board
+    }
+    function revealMine(click){
+        if (board[click[0]] == undefined || board[click[0]][click[1]] == undefined) return;
+        var target = board[click[0]][click[1]]
+        var dir = [[-1,-1],[-1,0],[-1,1],[0,-1],[0,1],[1,-1],[1,0],[1,1]]
+        var mineCount = 0;
+        for(var i = 0; i<dir.length;i++){
+            if (board[click[0]+dir[i][0]] == undefined || board[click[0]+dir[i][0]][click[1]+dir[i][1]] == undefined) continue;
+            if(board[click[0]+dir[i][0]][click[1]+dir[i][1]]=='M'){
+               mineCount++;
+            }
+        }
+        if(target=='E'){
+            if(mineCount == 0){
+                 board[click[0]][click[1]] = 'B'
+                for(var i = 0; i<dir.length;i++){
+                    revealMine([click[0]+dir[i][0],click[1]+dir[i][1]])
+                }
+            }else{
+                 board[click[0]][click[1]]=mineCount.toString()
+            }
+        }
+    }
+    revealMine(click)
+    return board
+}
+```

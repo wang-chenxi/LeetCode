@@ -50,6 +50,43 @@ The highest score is 2, and two nodes (node 0 and node 1) have the highest score
 
 ## Solution 1.
 
-```cpp
+```JS
+
+// OJ: https://leetcode.com/problems/count-nodes-with-the-highest-score/
+// Author: github.com/wang-chenxi
+// Time: O()
+// Space: O()
+/**
+ * @param {number[]} parents
+ * @return {number}
+ */
+var countHighestScoreNodes = function(P) {
+    var G = [], N = P.length;
+    for (var i = 0; i < N; ++i) G[i] = [];
+    for (var i = 1; i < N; ++i) {
+        G[P[i]].push(i);
+    }
+    var maxScore = 0;
+    var ans = 0;
+    var dfs = (u) => { // input: node u, output: size of tree rooted at u
+        var cnt = 1;  // the size of tree rooted at u
+        var score = 1;
+        for (const v of G[u]) {
+            var c = dfs(v);
+            cnt += c;
+            score *= c;
+        }
+        if (N - cnt) score *= N - cnt;
+        if (score > maxScore) {
+            maxScore = score;
+            ans = 1;
+        }else if(score == maxScore){
+            ans ++;
+        }
+        return cnt;
+    };
+    dfs(0);
+    return ans
+};
 
 ```

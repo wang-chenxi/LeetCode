@@ -34,6 +34,15 @@
 **Related Topics**:  
 [Array](https://leetcode.com/tag/array/), [Hash Table](https://leetcode.com/tag/hash-table/), [Sliding Window](https://leetcode.com/tag/sliding-window/), [Prefix Sum](https://leetcode.com/tag/prefix-sum/)
 
+## Testcases
+
+[0,1,1,1,1]
+3
+[1,0,1,0,1]
+2
+[0,0,0,0,0]
+0
+
 ## Solution 1.
 
 ```JS
@@ -47,17 +56,30 @@
  * @param {number} goal
  * @return {number}
  */
+// OJ: https://leetcode.com/problems/binary-subarrays-with-sum/
+// Author: github.com/wang-chenxi
+// Time: O()
+// Space: O()
+/**
+ * @param {number[]} nums
+ * @param {number} goal
+ * @return {number}
+ */
 var numSubarraysWithSum = function(A, goal) {
-    var i = 0, j = 0, sum = 0, N = 0, ans = 0;
-    for (; j < N; ++j) {
-        sum += A[j-1]
-        console.log(sum)
-        if (sum > goal) {
-            for (; i < j; ++i) {
-                if(sum>goal) continue;
-                else if(sum == goal) ans++;
-                sum -= A[i-1]
-                console.log(sum)
+    var i = 0, j = 0, sum = 0, ans = 0;
+    for (; j < A.length; ++j) {
+        sum += A[j]
+        while(sum>goal&&i<=j){
+            i++
+            sum -=A[i-1]
+        }
+        if(sum == goal){
+            var tempSum = sum
+            for(var x = i;x<=j;x++){
+                if(tempSum == goal){
+                    ans++;
+                    tempSum -=A[x]
+                }
             }
         }
     }

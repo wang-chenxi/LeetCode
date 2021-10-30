@@ -36,6 +36,32 @@
 
 ## Solution 1.
 
-```cpp
+```JS
+
+// OJ: https://leetcode.com/problems/binary-subarrays-with-sum/
+// Author: github.com/wang-chenxi
+// Time: O()
+// Space: O()
+/**
+ * @param {number[]} nums
+ * @param {number} goal
+ * @return {number}
+ */
+var numSubarraysWithSum = function(A, goal) {
+    var i = 0, j = 0, sum = 0, N = 0, ans = 0;
+    for (; j < N; ++j) {
+        sum += A[j-1]
+        console.log(sum)
+        if (sum > goal) {
+            for (; i < j; ++i) {
+                if(sum>goal) continue;
+                else if(sum == goal) ans++;
+                sum -= A[i-1]
+                console.log(sum)
+            }
+        }
+    }
+    return ans
+};
 
 ```

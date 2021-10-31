@@ -49,7 +49,7 @@
 
 // OJ: https://leetcode.com/problems/binary-subarrays-with-sum/
 // Author: github.com/wang-chenxi
-// Time: O()
+// Time: O(N^2)
 // Space: O()
 /**
  * @param {number[]} nums
@@ -84,6 +84,32 @@ var numSubarraysWithSum = function(A, goal) {
         }
     }
     return ans
+};
+
+```
+
+## Solution 2. At Most GOAL
+
+```
+/**
+ * @param {number[]} nums
+ * @param {number} goal
+ * @return {number}
+ */
+var numSubarraysWithSum = function(A, goal) {
+    var atMost = function (goal) {
+        var i = 0, j = 0, N = A.length, cnt = 0, ans = 0;
+        for (; j < N; ++j) {
+            cnt += A[j];
+            while (i <= j && cnt > goal) {
+                cnt -= A[i];
+                ++i;
+            }
+            ans += j - i + 1;
+        }
+        return ans;
+    }
+    return atMost(goal) - atMost(goal - 1);
 };
 
 ```

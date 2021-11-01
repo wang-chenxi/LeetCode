@@ -85,7 +85,7 @@ var maxConsecutiveAnswers = function(answerKey, k) {
         }
         return ans
     }
-    return Math.max(maxLenwithKx(answerKey,k,"T"),Math.max(maxLenwithKx(answerKey,k,"F")))
+    return Math.max(maxLenwithKx(answerKey,k,"T"),maxLenwithKx(answerKey,k,"F"))
 };
 
 ```

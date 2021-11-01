@@ -80,10 +80,10 @@ var maxConsecutiveAnswers = function(answerKey, k) {
             while(cnt>k&&i<=j){
                 if(answerKey[i]==x) cnt--
                 i++
+            }
+            ans = Math.max(j-i+1,ans)
         }
-                        ans = Math.max(j-i+1,ans)
-    }
-                return ans
+        return ans
     }
     return Math.max(maxLenwithKx(answerKey,k,"T"),Math.max(maxLenwithKx(answerKey,k,"F")))
 };

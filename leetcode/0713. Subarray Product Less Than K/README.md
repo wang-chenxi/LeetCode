@@ -37,8 +37,59 @@ Note that [10, 5, 2] is not included as the product of 100 is not strictly less 
 - [Subarray Sum Equals K (Medium)](https://leetcode.com/problems/subarray-sum-equals-k/)
 - [Two Sum Less Than K (Easy)](https://leetcode.com/problems/two-sum-less-than-k/)
 
-## Solution 1.
+## Solution 1.bruteforce
 
-```cpp
+```JS
 
+// OJ: https://leetcode.com/problems/subarray-product-less-than-k/
+// Author: github.com/wang-chenxi
+// Time: O()
+// Space: O()
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {number}
+ */
+var numSubarrayProductLessThanK = function(nums, k) {
+    var j=0,N=nums.length,cnt=0;
+    for(;j<N;j++){
+        var product =1;
+        for(var i=j;i>=0;i--){
+            product *=nums[i]
+            if(product>=k) break
+            cnt ++
+        }
+    }
+    return cnt
+};
+
+```
+
+## Solution 2.Sliding Window
+
+```JS
+
+// OJ: https://leetcode.com/problems/subarray-product-less-than-k/
+// Author: github.com/wang-chenxi
+// Time: O()
+// Space: O()
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {number}
+ */
+var numSubarrayProductLessThanK = function(nums, k) {
+    var j=0,i=0,N=nums.length,cnt=0,product=1;
+    for(;j<N;j++){
+        product *=nums[j];
+        if(product>=k){
+            for(;i<=j;i++){
+                if(product <k) break
+                product = product/nums[i]
+            }
+        }
+        cnt += j-i+1
+    }
+    return cnt
+};
 ```

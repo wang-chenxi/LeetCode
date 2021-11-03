@@ -53,6 +53,7 @@ Now I'm using a Chrome Extension Richard developed -- [LeetCoder](https://chrome
 0690 | Employee Importance | Easy | [Solution](leetcode/0690.%20Employee%20Importance)
 0700 | Search in a Binary Search Tree | Easy | [Solution](leetcode/0700.%20Search%20in%20a%20Binary%20Search%20Tree)
 0704 | Binary Search | Easy | [Solution](leetcode/0704.%20Binary%20Search)
+0713 | Subarray Product Less Than K | Medium | [Solution](leetcode/0713.%20Subarray%20Product%20Less%20Than%20K)
 0733 | Flood Fill | Easy | [Solution](leetcode/0733.%20Flood%20Fill)
 0930 | Binary Subarrays With Sum | Medium | [Solution](leetcode/0930.%20Binary%20Subarrays%20With%20Sum)
 1208 | Get Equal Substrings Within Budget | Medium | [Solution](leetcode/1208.%20Get%20Equal%20Substrings%20Within%20Budget)
@@ -61,6 +62,7 @@ Now I'm using a Chrome Extension Richard developed -- [LeetCoder](https://chrome
 1493 | Longest Subarray of 1's After Deleting One Element | Medium | [Solution](leetcode/1493.%20Longest%20Subarray%20of%201%27s%20After%20Deleting%20One%20Element)
 1559 | Detect Cycles in 2D Grid | Medium | [Solution](leetcode/1559.%20Detect%20Cycles%20in%202D%20Grid)
 1672 | Richest Customer Wealth | Easy | [Solution](leetcode/1672.%20Richest%20Customer%20Wealth)
+2024 | Maximize the Confusion of an Exam | Medium | [Solution](leetcode/2024.%20Maximize%20the%20Confusion%20of%20an%20Exam)
 2027 | Minimum Moves to Convert String | Easy | [Solution](leetcode/2027.%20Minimum%20Moves%20to%20Convert%20String)
 2049 | Count Nodes With the Highest Score | Medium | [Solution](leetcode/2049.%20Count%20Nodes%20With%20the%20Highest%20Score)
 

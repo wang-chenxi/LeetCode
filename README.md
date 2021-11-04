@@ -56,6 +56,7 @@ Now I'm using a Chrome Extension Richard developed -- [LeetCoder](https://chrome
 0713 | Subarray Product Less Than K | Medium | [Solution](leetcode/0713.%20Subarray%20Product%20Less%20Than%20K)
 0733 | Flood Fill | Easy | [Solution](leetcode/0733.%20Flood%20Fill)
 0930 | Binary Subarrays With Sum | Medium | [Solution](leetcode/0930.%20Binary%20Subarrays%20With%20Sum)
+0992 | Subarrays with K Different Integers | Hard | [Solution](leetcode/0992.%20Subarrays%20with%20K%20Different%20Integers)
 1208 | Get Equal Substrings Within Budget | Medium | [Solution](leetcode/1208.%20Get%20Equal%20Substrings%20Within%20Budget)
 1248 | Count Number of Nice Subarrays | Medium | [Solution](leetcode/1248.%20Count%20Number%20of%20Nice%20Subarrays)
 1431 | Kids With the Greatest Number of Candies | Easy | [Solution](leetcode/1431.%20Kids%20With%20the%20Greatest%20Number%20of%20Candies)

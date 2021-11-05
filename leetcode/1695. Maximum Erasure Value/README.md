@@ -69,3 +69,30 @@ var maximumUniqueSubarray = function(nums) {
 }
 
 ```
+
+or
+
+```JS
+// OJ: https://leetcode.com/problems/maximum-erasure-value/
+// Author: github.com/wang-chenxi
+// Time: O()
+// Space: O()
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var maximumUniqueSubarray = function(A) {
+    var i = 0, j = 0, N = A.length, ans = 0, s = new Set(), sum = 0;
+    for (; j < N; ++j) {
+        for (; s.has(A[j]); ++i) {
+            s.delete(A[i]);
+            sum -= A[i];
+        }
+        s.add(A[j]);
+        sum += A[j];
+        ans = Math.max(ans, sum);
+    }
+    return ans
+}
+
+```

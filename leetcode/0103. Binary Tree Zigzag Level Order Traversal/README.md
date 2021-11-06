@@ -39,7 +39,6 @@
 ## Solution 1.
 
 ```JS
-
 // OJ: https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/
 // Author: github.com/wang-chenxi
 // Time: O()
@@ -58,10 +57,10 @@
  */
 var zigzagLevelOrder = function(root) {
     var reverse = false;
-    if(!root) return
+    if(!root) return []
     var ans = []
     var temp = [root]
-    while(temp){
+    while(temp.length!=0){
         var cnt = temp.length;
         var level = []
         for(var i = 0; i<cnt;i++){
@@ -70,7 +69,7 @@ var zigzagLevelOrder = function(root) {
             if(node.left) temp.push(node.left)
             if(node.right) temp.push(node.right)
         }
-        if(reverse == true){
+        if(reverse){
             level.reverse()
         }
         ans.push(level)

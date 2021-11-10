@@ -54,8 +54,63 @@
 - [Course Schedule (Medium)](https://leetcode.com/problems/course-schedule/)
 - [Course Schedule II (Medium)](https://leetcode.com/problems/course-schedule-ii/)
 
-## Solution 1.
+## Solution 1.BFS nested loop, will return TLE
 
-```cpp
+```JS
+
+// OJ: https://leetcode.com/problems/minimum-height-trees/
+// Author: github.com/wang-chenxi
+// Time: O()
+// Space: O()
+};
+/**
+ * @param {number} n
+ * @param {number[][]} edges
+ * @return {number[]}
+ */
+var findMinHeightTrees = function(n, edges) {
+    //define the map for retriving nodes
+    var map = new Map();
+    for(var i = 0; i<n;i++){
+        map.set(i,[])
+    }
+    for(var i = 0;i<edges.length;i++){
+        map.get(edges[i][0]).push(edges[i][1])
+        map.get(edges[i][1]).push(edges[i][0])
+    }
+    // define helper method
+    var checkingLevel = function(node,map){
+        var queue = [node]
+        var height = 0;
+        var visited = new Set();
+        while(queue.length != 0){
+            var cnt = queue.length
+            for(var i = 0; i<cnt;i++){
+                var current = queue.shift()
+                visited.add(current)
+                var list = map.get(current)
+                for(var leaf of list){
+                    if(!visited.has(leaf)){
+                        queue.push(leaf)
+                    }
+                }
+            }
+            height ++;
+        }
+        return height;
+    }
+    var currentMin = Infinity, ans = [];
+    for(var i = 0;i<n;i++){
+        var height = checkingLevel(i,map)
+        console.log(i,height)
+        if(height<currentMin){
+            currentMin = height
+            ans = [i]
+        }else if(height == currentMin){
+            ans.push(i)
+        }
+    }
+    return ans
+};
 
 ```

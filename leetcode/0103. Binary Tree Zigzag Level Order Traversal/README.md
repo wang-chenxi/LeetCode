@@ -36,7 +36,7 @@
 
 - [Binary Tree Level Order Traversal (Medium)](https://leetcode.com/problems/binary-tree-level-order-traversal/)
 
-## Solution 1.
+## Solution 1. will have runtime error
 
 ```JS
 // OJ: https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/
@@ -78,4 +78,46 @@ var zigzagLevelOrder = function(root) {
     return ans
     }
 
+```
+
+## solution 2. basically same with solution 1, just use unshift() to replace reverse()
+
+```JS
+
+// OJ: https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/
+// Author: github.com/wang-chenxi
+// Time: O()
+// Space: O()
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {number[][]}
+ */
+var zigzagLevelOrder = function(root) {
+    var reverse = false;
+    if(!root) return[]
+    var ans = []
+    var temp = [root]
+    while(temp.length>0){
+        var cnt = temp.length;
+        var level = []
+        for(var i = 0; i<cnt;i++){
+            var node = temp.shift()
+            if(reverse) level.unshift(node.val)
+            else level.push(node.val)
+            if(node.left) temp.push(node.left)
+            if(node.right) temp.push(node.right)
+        }
+        ans.push(level)
+        reverse = !reverse
+        }
+    return ans
+    }
 ```

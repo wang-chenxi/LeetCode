@@ -27,6 +27,7 @@ Now I'm using a Chrome Extension Richard developed -- [LeetCoder](https://chrome
 0088 | Merge Sorted Array | Easy | [Solution](leetcode/0088.%20Merge%20Sorted%20Array)
 0098 | Validate Binary Search Tree | Medium | [Solution](leetcode/0098.%20Validate%20Binary%20Search%20Tree)
 0102 | Binary Tree Level Order Traversal | Medium | [Solution](leetcode/0102.%20Binary%20Tree%20Level%20Order%20Traversal)
+0103 | Binary Tree Zigzag Level Order Traversal | Medium | [Solution](leetcode/0103.%20Binary%20Tree%20Zigzag%20Level%20Order%20Traversal)
 0104 | Maximum Depth of Binary Tree | Easy | [Solution](leetcode/0104.%20Maximum%20Depth%20of%20Binary%20Tree)
 0112 | PathSum | Easy | [Solution](leetcode/0112.%20PathSum)
 0113 | Path Sum II | Medium | [Solution](leetcode/0113.%20Path%20Sum%20II)
@@ -43,6 +44,7 @@ Now I'm using a Chrome Extension Richard developed -- [LeetCoder](https://chrome
 0238 | Product of Array Except Self | Medium | [Solution](leetcode/0238.%20Product%20of%20Array%20Except%20Self)
 0242 | Anagram | Easy | [Solution](leetcode/0242.Valid%20Anagram)
 0283 | Move Zeroes | Easy | [Solution](leetcode/0283.%20Move%20Zeroes)
+0310 | Minimum Height Trees | Medium | [Solution](leetcode/0310.%20Minimum%20Height%20Trees)
 0344 | Reverse String | Easy | [Solution](leetcode/0344.%20Reverse%20String)
 0349 | Intersection of Two Arrays | Easy | [Solution](leetcode/0349.%20Intersection%20of%20Two%20Arrays)
 0387 | First Unique Character in a String | Easy | [Solution](leetcode/0387.%20First%20Unique%20Character%20in%20a%20String)
@@ -55,7 +57,9 @@ Now I'm using a Chrome Extension Richard developed -- [LeetCoder](https://chrome
 0704 | Binary Search | Easy | [Solution](leetcode/0704.%20Binary%20Search)
 0713 | Subarray Product Less Than K | Medium | [Solution](leetcode/0713.%20Subarray%20Product%20Less%20Than%20K)
 0733 | Flood Fill | Easy | [Solution](leetcode/0733.%20Flood%20Fill)
+0841 | Keys and Rooms | Medium | [Solution](leetcode/0841.%20Keys%20and%20Rooms)
 0930 | Binary Subarrays With Sum | Medium | [Solution](leetcode/0930.%20Binary%20Subarrays%20With%20Sum)
+0934 | Shortest Bridge | Medium | [Solution](leetcode/0934.%20Shortest%20Bridge)
 0992 | Subarrays with K Different Integers | Hard | [Solution](leetcode/0992.%20Subarrays%20with%20K%20Different%20Integers)
 1208 | Get Equal Substrings Within Budget | Medium | [Solution](leetcode/1208.%20Get%20Equal%20Substrings%20Within%20Budget)
 1248 | Count Number of Nice Subarrays | Medium | [Solution](leetcode/1248.%20Count%20Number%20of%20Nice%20Subarrays)
@@ -64,10 +68,3 @@ Now I'm using a Chrome Extension Richard developed -- [LeetCoder](https://chrome
 1559 | Detect Cycles in 2D Grid | Medium | [Solution](leetcode/1559.%20Detect%20Cycles%20in%202D%20Grid)
 1672 | Richest Customer Wealth | Easy | [Solution](leetcode/1672.%20Richest%20Customer%20Wealth)
 1695 | Maximum Erasure Value | Medium | [Solution](leetcode/1695.%20Maximum%20Erasure%20Value)
-2024 | Maximize the Confusion of an Exam | Medium | [Solution](leetcode/2024.%20Maximize%20the%20Confusion%20of%20an%20Exam)
-2027 | Minimum Moves to Convert String | Easy | [Solution](leetcode/2027.%20Minimum%20Moves%20to%20Convert%20String)
-2049 | Count Nodes With the Highest Score | Medium | [Solution](leetcode/2049.%20Count%20Nodes%20With%20the%20Highest%20Score)
-
-# License
-
-All rights reserved by [github.com/wang-chenxi](https://github.com/wang-chenxi). Contact me if you want to redistribute the code. No commercial use.

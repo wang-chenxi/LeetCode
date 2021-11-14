@@ -68,3 +68,10 @@ Now I'm using a Chrome Extension Richard developed -- [LeetCoder](https://chrome
 1559 | Detect Cycles in 2D Grid | Medium | [Solution](leetcode/1559.%20Detect%20Cycles%20in%202D%20Grid)
 1672 | Richest Customer Wealth | Easy | [Solution](leetcode/1672.%20Richest%20Customer%20Wealth)
 1695 | Maximum Erasure Value | Medium | [Solution](leetcode/1695.%20Maximum%20Erasure%20Value)
+2024 | Maximize the Confusion of an Exam | Medium | [Solution](leetcode/2024.%20Maximize%20the%20Confusion%20of%20an%20Exam)
+2027 | Minimum Moves to Convert String | Easy | [Solution](leetcode/2027.%20Minimum%20Moves%20to%20Convert%20String)
+2049 | Count Nodes With the Highest Score | Medium | [Solution](leetcode/2049.%20Count%20Nodes%20With%20the%20Highest%20Score)
+
+# License
+
+All rights reserved by [github.com/wang-chenxi](https://github.com/wang-chenxi). Contact me if you want to redistribute the code. No commercial use.

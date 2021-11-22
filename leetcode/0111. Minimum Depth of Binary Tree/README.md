@@ -37,6 +37,38 @@
 
 ## Solution 1.
 
-```cpp
+```JS
+
+// OJ: https://leetcode.com/problems/minimum-depth-of-binary-tree/
+// Author: github.com/wang-chenxi
+// Time: O()
+// Space: O()
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {number}
+ */
+var minDepth = function(root) {
+    if(!root) return 0
+    var depth = Number.MAX_VALUE
+    var findDepth = (root,currentDepth)=>{
+        if(!root) return
+        if(!root.left&&!root.right){
+            console.log(root.val,currentDepth)
+            depth = Math.min(depth,currentDepth)
+        }
+        findDepth(root.left,currentDepth+1)
+        findDepth(root.right,currentDepth+1)
+    }
+    findDepth(root,1)
+    return depth
+};
 
 ```

@@ -21,7 +21,7 @@ echo "# LeetCode
 
 Author: [https://github.com/wang-chenxi](https://github.com/wang-chenxi)
 
-My JS/Java Code for LeetCode OJ.
+My JS/Java Code for LeetCode.
 
 The README is updated weekly. 
 

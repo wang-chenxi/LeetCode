@@ -61,6 +61,32 @@
 
 ## Solution 1.
 
-```cpp
+```JS
+
+// OJ: https://leetcode.com/problems/binary-tree-inorder-traversal/
+// Author: github.com/wang-chenxi
+// Time: O(n)
+// Space: O()
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {number[]}
+ */
+var inorderTraversal = function(root) {
+    var dfs = (root, arr)=>{
+        if( !root) return arr
+        arr = dfs(root.left,arr)
+        arr.push(root.val)
+        return dfs(root.right,arr)
+    }
+    return dfs(root,[])
+};
 
 ```

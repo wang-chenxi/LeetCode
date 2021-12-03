@@ -65,6 +65,32 @@ These are the only two combinations.
 
 ## Solution 1.
 
-```cpp
+```JS
+
+// OJ: https://leetcode.com/problems/combination-sum/
+// Author: github.com/wang-chenxi
+// Time: O()
+// Space: O()
+/**
+ * @param {number[]} candidates
+ * @param {number} target
+ * @return {number[][]}
+ */
+var combinationSum = function(candidates, target) {
+    const combinations = [];
+    const combinSum = (sum = 0, curr = [], start = 0) => {
+        if (sum > target) return;
+        if (sum === target) {
+            combinations.push(curr);
+            return;
+        }
+        for (let index = start; index < candidates.length; index++) {
+            const num = candidates[index];
+            combinSum(num + sum, [...curr, num], index);
+        }
+    };
+    combinSum();
+    return combinations;
+};
 
 ```

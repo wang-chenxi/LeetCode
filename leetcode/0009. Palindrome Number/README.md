@@ -50,6 +50,26 @@
 
 ## Solution 1.
 
-```cpp
+```JS
+
+// OJ: https://leetcode.com/problems/palindrome-number/
+// Author: github.com/wang-chenxi
+// Time: O()
+// Space: O()
+/**
+ * @param {number} x
+ * @return {boolean}
+ */
+var isPalindrome = function(x) {
+    if(x<0) return false
+    var string = x.toString()
+    var i = 0,j=string.length-1
+    while(i<=j){
+        if(string.charAt(i)!=string.charAt(j)) return false
+        i++
+        j--
+    }
+    return true
+};
 
 ```

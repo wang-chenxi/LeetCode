@@ -68,4 +68,31 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 
 ```JS
 
+// OJ: https://leetcode.com/problems/remove-element/
+// Author: github.com/wang-chenxi
+// Time: O()
+// Space: O()
+/**
+ * @param {number[]} nums
+ * @param {number} val
+ * @return {number}
+ */
+var removeElement = function(nums, val) {
+    var i=0,j=nums.length-1;
+    var k =0;
+    while(i<=j){
+        while(nums[j]==val){
+        j--
+        k++
+        }
+        if(nums[i]==val&&i<j){
+            nums[i] = nums[j]
+            nums[j]=val
+        }
+        i++
+    }
+    console.log(nums)
+    return nums.length-k
+};
+
 ```

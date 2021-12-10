@@ -40,6 +40,33 @@
 
 ## Solution 1.
 
-```cpp
+```JS
+
+// OJ: https://leetcode.com/problems/search-insert-position/
+// Author: github.com/wang-chenxi
+// Time: O()
+// Space: O()
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number}
+ */
+var searchInsert = function(nums, target) {
+    if(target<nums[0]) return 0;
+    var leftIndex = 0;
+    var rightIndex = nums.length-1;
+    var ans;
+    while(true){
+        var mid = Math.floor((leftIndex+rightIndex)/2)
+        console.log(mid)
+        if(target==nums[mid]){
+            return ans = mid
+        }else if(target>nums[rightIndex]) return ans = rightIndex+1;
+        else if(target<nums[leftIndex]) return ans = leftIndex;
+        else if(target>nums[mid]) leftIndex = mid+1
+        else rightIndex = mid
+    }
+    return ans
+};
 
 ```

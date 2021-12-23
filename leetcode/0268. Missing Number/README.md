@@ -50,6 +50,23 @@
 
 ## Solution 1.
 
-```cpp
-
+```js
+// OJ: https://leetcode.com/problems/missing-number/
+// Author: github.com/wang-chenxi
+// Time: O()
+// Space: O()
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var missingNumber = function (nums) {
+  var set = new Set();
+  for (var n of nums) {
+    console.log(n);
+    set.add(n);
+  }
+  for (var i = 0; i <= nums.length; i++) {
+    if (!set.has(i)) return i;
+  }
+};
 ```

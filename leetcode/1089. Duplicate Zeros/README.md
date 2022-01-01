@@ -33,5 +33,25 @@
 ## Solution 1.
 
 ```js
-
+// OJ: https://leetcode.com/problems/duplicate-zeros/
+// Author: github.com/wang-chenxi
+// Time: O()
+// Space: O()
+/**
+ * @param {number[]} arr
+ * @return {void} Do not return anything, modify arr in-place instead.
+ */
+var duplicateZeros = function (arr) {
+  var i = 0;
+  var queue = [];
+  var length = arr.length;
+  while (i < length) {
+    queue.push(arr[i]);
+    if (arr[i] == 0) {
+      queue.push(0);
+    }
+    arr[i] = queue.shift();
+    i++;
+  }
+};
 ```

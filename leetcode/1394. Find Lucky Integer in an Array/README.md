@@ -39,6 +39,31 @@
 
 ## Solution 1.
 
-```cpp
-
+```js
+// OJ: https://leetcode.com/problems/find-lucky-integer-in-an-array/
+// Author: github.com/wang-chenxi
+// Time: O()
+// Space: O()
+/**
+ * @param {number[]} arr
+ * @return {number}
+ */
+var findLucky = function (arr) {
+  var length = arr.length;
+  var map = new Map();
+  for (var i = 0; i < length; i++) {
+    if (!map.has(arr[i])) {
+      map.set(arr[i], 1);
+    } else {
+      map.set(arr[i], map.get(arr[i]) + 1);
+    }
+  }
+  var ans = -1;
+  for (let key of map.keys()) {
+    if (key == map.get(key) && key > ans) {
+      ans = key;
+    }
+  }
+  return ans;
+};
 ```

@@ -52,6 +52,34 @@
 
 ## Solution 1.
 
-```cpp
-
+```js
+// OJ: https://leetcode.com/problems/distance-between-bus-stops/
+// Author: github.com/wang-chenxi
+// Time: O()
+// Space: O()
+/**
+ * @param {number[]} distance
+ * @param {number} start
+ * @param {number} destination
+ * @return {number}
+ */
+var distanceBetweenBusStops = function (distance, start, destination) {
+  if (start == destination) return 0;
+  if (start > destination) {
+    var rep = start;
+    start = destination;
+    destination = rep;
+  }
+  var sum = 0,
+    part1 = 0;
+  var length = distance.length;
+  if (destination)
+    for (var i = 0; i < length; i++) {
+      sum += distance[i];
+      if (i >= start && i < destination) {
+        part1 += distance[i];
+      }
+    }
+  return Math.min(part1, sum - part1);
+};
 ```

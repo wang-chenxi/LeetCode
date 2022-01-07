@@ -36,5 +36,28 @@ Result = 32 - 11 = 21
 ## Solution 1.
 
 ```js
-
+// OJ: https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/
+// Author: github.com/wang-chenxi
+// Time: O()
+// Space: O()
+/**
+ * @param {number} n
+ * @return {number}
+ */
+var subtractProductAndSum = function (n) {
+  var arr = [];
+  var remain = 0;
+  while (n > 0) {
+    arr.push(n % 10);
+    n = Math.floor(n / 10);
+  }
+  console.log(arr);
+  var sum = 0;
+  var product = 1;
+  for (var i = 0; i < arr.length; i++) {
+    product *= arr[i];
+    sum += arr[i];
+  }
+  return product - sum;
+};
 ```

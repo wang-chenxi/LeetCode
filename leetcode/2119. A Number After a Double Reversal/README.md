@@ -47,6 +47,18 @@
 
 ## Solution 1.
 
-```cpp
+```js
+
+// OJ: https://leetcode.com/problems/a-number-after-a-double-reversal/
+// Author: github.com/wang-chenxi
+// Time: O()
+// Space: O()
+class Solution {
+    public boolean isSameAfterReversals(int num) {
+        if(num==0) return true;
+        if(num%10==0) return false;
+        return true;
+    }
+}
 
 ```

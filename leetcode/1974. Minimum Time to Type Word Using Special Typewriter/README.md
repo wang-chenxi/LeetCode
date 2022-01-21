@@ -68,7 +68,7 @@ The characters are printed as follows:
 
 **Similar Questions**:
 
-- [Minimum Distance to Type a Word Using Two Fingers (Hard)](https://leetcode.com/problems/minimum-distance-to-type-a-word-using-two-fingers/)
+- [Minimum Distance to Type a Word Using Two Fingers ](https://leetcode.com/problems/minimum-distance-to-type-a-word-using-two-fingers/)
 
 ## Solution 1.
 

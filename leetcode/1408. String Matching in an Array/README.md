@@ -54,13 +54,13 @@ var stringMatching = function (words) {
   var map = new Map();
   var ans = [];
   for (var j = 0; j < words.length; j++) {
-    var word = words[j];
-    map.set(word.length, word);
+    console.log(words[j].length, words[j]);
+    map.set(words[j], words[j].length);
   }
+  console.log(map);
   for (var i = 0; i < words.length; i++) {
-    for (var [key, word] of map.entries()) {
-      console.log(key, word);
-      if (key > words[i].length) {
+    for (var [word, length] of map.entries()) {
+      if (length > words[i].length) {
         if (word.includes(words[i])) {
           ans.push(words[i]);
           break;

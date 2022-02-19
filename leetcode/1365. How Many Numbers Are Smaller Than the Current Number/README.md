@@ -55,5 +55,7 @@ For nums[4]=3 there exist three smaller numbers than it (1, 2 and 2).
  * @param {number[]} nums
  * @return {number[]}
  */
-var smallerNumbersThanCurrent = function (nums) {};
+var smallerNumbersThanCurrent = function (nums) {
+  return nums.map((n) => nums.reduce((a, b) => a + (n > b ? 1 : 0), 0));
+};
 ```

@@ -25,3 +25,6 @@ Now I'm using a Chrome Extension Richard developed -- [LeetCoder](https://chrome
 0020 | Valid Parentheses | Easy | [Solution](leetcode/0020.%20Valid%20Parentheses)
 0021 | Merge Two Sorted Lists | Easy | [Solution](leetcode/0021.%20Merge%20Two%20Sorted%20Lists)
 0022 | Generate Parentheses | Medium | [Solution](leetcode/0022.%20Generate%20Parentheses)
+0024 | Swap Nodes in Pairs | Medium | [Solution](leetcode/0024.%20Swap%20Nodes%20in%20Pairs)
+0026 | Remove Duplicates from Sorted Array | Easy | [Solution](leetcode/0026.%20Remove%20Duplicates%20from%20Sorted%20Array)
+0027 | Remove Element | Easy | [Solution](leetcode/0027.%20Remove%20Element)

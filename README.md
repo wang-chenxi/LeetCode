@@ -18,3 +18,6 @@ Now I'm using a Chrome Extension Richard developed -- [LeetCoder](https://chrome
 
 \# | Title | Difficulty | Solution
 ---|---|---|---
+0002 | Add Two Numbers |  | [Solution](leetcode/0002.%20Add%20Two%20Numbers)
+0009 | Palindrome Number | Easy | [Solution](leetcode/0009.%20Palindrome%20Number)
+0011 | Container With Most Water | Medium | [Solution](leetcode/0011.%20Container%20With%20Most%20Water)

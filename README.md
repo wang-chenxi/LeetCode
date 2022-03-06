@@ -18,11 +18,3 @@ Now I'm using a Chrome Extension Richard developed -- [LeetCoder](https://chrome
 
 \# | Title | Difficulty | Solution
 ---|---|---|---
-0002 | Add Two Numbers |  | [Solution](leetcode/0002.%20Add%20Two%20Numbers)
-0009 | Palindrome Number | Easy | [Solution](leetcode/0009.%20Palindrome%20Number)
-0011 | Container With Most Water | Medium | [Solution](leetcode/0011.%20Container%20With%20Most%20Water)
-0015 | 3Sum | Medium | [Solution](leetcode/0015.%203Sum)
-0020 | Valid Parentheses | Easy | [Solution](leetcode/0020.%20Valid%20Parentheses)
-0021 | Merge Two Sorted Lists | Easy | [Solution](leetcode/0021.%20Merge%20Two%20Sorted%20Lists)
-0022 | Generate Parentheses | Medium | [Solution](leetcode/0022.%20Generate%20Parentheses)
-0024 | Swap Nodes in Pairs | Medium | [Solution](leetcode/0024.%20Swap%20Nodes%20in%20Pairs)

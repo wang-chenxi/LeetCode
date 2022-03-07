@@ -48,5 +48,22 @@ The above figure represents the given linked list. The modified list contains
 ## Solution 1.
 
 ```js
+var mergeNodes = function (head) {
+  let curNode = head;
 
+  while (curNode) {
+    if (curNode.val === 0) {
+      let tail = curNode.next;
+
+      while (tail && tail.val !== 0) {
+        curNode.val += tail.val;
+        tail = tail.next;
+      }
+      if (tail.val === 0 && tail.next === null) tail = null;
+      curNode.next = tail;
+      curNode = curNode.next;
+    }
+  }
+  return head;
+};
 ```

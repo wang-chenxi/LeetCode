@@ -75,3 +75,26 @@ var maxDepth = function(root) {
 }
 
 ```
+
+## Solutin 2.
+
+```JS
+
+var maxDepth = function(root) {
+    if (!root) return 0;
+    if (root.left && root.right) {
+        var left = maxDepth(root.left);
+        var right = maxDepth(root.right);
+        return Math.max(left, right) + 1;
+    }
+    if (!root.left && !root.right) {
+        return 1;
+    }
+    if (root.left && !root.right) {
+        return maxDepth(root.left) + 1;
+    }
+    if (!root.left && root.right) {
+        return maxDepth(root.right) + 1;
+    }
+};
+```

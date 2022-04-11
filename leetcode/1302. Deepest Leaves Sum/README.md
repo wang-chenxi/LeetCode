@@ -30,4 +30,40 @@ Given the <code>root</code> of a binary tree, return <em>the sum of values of it
 
 ```js
 
+// OJ: https://leetcode.com/problems/deepest-leaves-sum/
+// Author: github.com/wang-chenxi
+// Time: O()
+// Space: O()
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {number}
+ */
+var deepestLeavesSum = function(root) {
+    //bfs 
+    if(!root) return 0;
+    var ans = 0;
+    var queue = [];
+    queue.push(root)
+    while(queue.length>0){
+        ans = 0;
+        var length = queue.length;
+        console.log(queue)
+        for(var i = 0;i<length;i++){
+            var node = queue.shift()
+            ans += node.val
+            if(node.left)queue.push(node.left)
+            if(node.right)queue.push(node.right)
+        }
+    }
+    return ans
+};
+
 ```

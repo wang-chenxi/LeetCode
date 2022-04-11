@@ -30,6 +30,7 @@ Given the <code>root</code> of a binary tree, return <em>the sum of values of it
 
 ```js
 
+<<<<<<< HEAD
 // OJ: https://leetcode.com/problems/deepest-leaves-sum/
 // Author: github.com/wang-chenxi
 // Time: O()
@@ -46,6 +47,8 @@ Given the <code>root</code> of a binary tree, return <em>the sum of values of it
  * @param {TreeNode} root
  * @return {number}
  */
+=======
+>>>>>>> c56a6aeeb2bd1fc26521bb7d587234b0a7395f01
 var deepestLeavesSum = function(root) {
     //bfs 
     if(!root) return 0;

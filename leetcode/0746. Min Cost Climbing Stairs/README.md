@@ -68,3 +68,20 @@ var minCostClimbingStairs = function (cost) {
   return Math.min(first, second);
 };
 ```
+
+```js
+// OJ: https://leetcode.com/problems/min-cost-climbing-stairs/
+// Author: github.com/wang-chenxi
+// Time: O()
+// Space: O()
+/**
+ * @param {number[]} cost
+ * @return {number}
+ */
+var minCostClimbingStairs = function(cost) {
+    for (let i = cost.length - 3; ~i; i--)
+        cost[i] += Math.min(cost[i+1], cost[i+2])
+    return Math.min(cost[0], cost[1])
+};
+
+```

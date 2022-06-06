@@ -71,14 +71,6 @@ Explanation: The two lists do not intersect, so return null.
 * [Minimum Index Sum of Two Lists (Easy)](https://leetcode.com/problems/minimum-index-sum-of-two-lists/)
 
 ## Solution 1.
-
-```js
-
-// OJ: https://leetcode.com/problems/intersection-of-two-linked-lists/
-// Author: github.com/wang-chenxi
-// Time: O()
-// Space: O()
-
 <div class="discuss-markdown-container"><p><em>(Note: This is part of a series of Leetcode solution explanations. If you like this solution or find it useful,</em> <em><strong>please upvote</strong></em> <em>this post.)</em></p><p>
 </p><hr>
 <h4><em><strong>Idea:</strong></em></h4>
@@ -93,6 +85,15 @@ Explanation: The two lists do not intersect, so return null.
 <p></p><p>There code for all four languages is almost identical.</p><p>
 </p><hr>
 </div>
+
+```js
+
+// OJ: https://leetcode.com/problems/intersection-of-two-linked-lists/
+// Author: github.com/wang-chenxi
+// Time: O()
+// Space: O()
+
+
 /**
  * Definition for singly-linked list.
  * function ListNode(val) {

@@ -67,3 +67,38 @@ var sortedArrayToBST = function (nums) {
 ```
 
 daily challenge august 10
+
+## solution 2. two pointers
+
+```js
+
+// OJ: https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/
+// Author: github.com/wang-chenxi
+// Time: O()
+// Space: O()
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {number[]} nums
+ * @retur(n {TreeNode}
+ */
+var sortedArrayToBST = function(nums) {
+    var len = nums.length-1
+    var helper = function(left,right){
+        if(left>right) return null
+        var mid = Math.floor((left+right)/2)
+        var node = new TreeNode(val=nums[mid])
+        node.left = helper(left,mid-1)
+        node.right = helper(mid+1,right)
+        return node
+    }
+    return helper(0,len)
+};
+
+```

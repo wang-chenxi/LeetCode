@@ -65,3 +65,5 @@ var sortedArrayToBST = function (nums) {
   return root;
 };
 ```
+
+daily challenge august 10

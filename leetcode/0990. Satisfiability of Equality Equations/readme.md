@@ -49,9 +49,38 @@ There is no way to assign the variables to satisfy both equations.
  * @return {boolean}
  */
 var equationsPossible = function(equations) {
-    var map = new Map()
-    for(var i =0;i<equations.length;i++){
-    }
-};
+	const parent = Array(26);
+	
+	for (let i = 0; i < 26; i++) 
+		parent[i] = i;
+	
+	function find(x) {
+		if (parent[x] != x)
+			parent[x] = find(parent[x]);
+		
+		return parent[x];
+	}
+	
+	for (const eq of equations) {
+		if (eq[1] === '=') {
+			const p1 = find(eq[0].charCodeAt(0) - 'a'.charCodeAt(0));
+			const p2 = find(eq[3].charCodeAt(0) - 'a'.charCodeAt(0));
+			
+			parent[p2] = p1;
+		}
+	}
+	
+	for (const eq of equations) {
+		if (eq[1] ===  '!') {
+			const p1 = find(eq[0].charCodeAt(0) - 'a'.charCodeAt(0));
+			const p2 = find(eq[3].charCodeAt(0) - 'a'.charCodeAt(0));
+			
+			if (p1 === p2)
+				return false;
+		}
+	}
+	
+	return true;
+}
 
 ```

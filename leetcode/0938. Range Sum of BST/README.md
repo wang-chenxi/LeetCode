@@ -63,3 +63,18 @@ var rangeSumBST = function (root, low, high) {
   return ans;
 };
 ```
+```js
+
+var rangeSumBST = function(root, low, high) {
+var sum = 0;
+var dfs = (root)=>{
+    if(root.val<=high&&root.val>=low) sum +=root.val;
+    if(root.left) dfs(root.left)
+    if(root.right) dfs(root.right)
+}
+dfs(root)
+return sum
+};
+
+
+```

@@ -75,3 +75,50 @@ var leafSimilar = function(root1, root2) {
 };
 
 ```
+
+### Solution 2 
+```js
+
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root1
+ * @param {TreeNode} root2
+ * @return {boolean}
+ */
+var leafSimilar = function(root1, root2) {
+//dfs
+var queue1= []
+var queue2= []
+var sortTheLeaf1 = (root)=>{
+    if(!root) return
+    if(root.left) sortTheLeaf1(root.left)
+    if(!root.left&&!root.right){
+        queue1.push(root.val)
+        return
+    }
+    if(root.right) sortTheLeaf1(root.right)
+}
+var sortTheLeaf2 = (root)=>{
+    if(!root) return
+    if(root.left) sortTheLeaf2(root.left)
+    if(!root.left&&!root.right){
+        queue2.push(root.val)
+        return
+    }
+    if(root.right) sortTheLeaf2(root.right)
+}
+sortTheLeaf1(root1)
+sortTheLeaf2(root2)
+return queue1.toString()==queue2.toString()
+};
+Console
+
+
+```

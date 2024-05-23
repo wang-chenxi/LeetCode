@@ -31,3 +31,37 @@ var beautifulSubsets = function(nums, k) {
 };
 
 ```
+
+#### improve performance by only passing ind instead of creating new arr
+
+```js
+
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {number}
+ */
+var beautifulSubsets = function(nums, k) {
+    let ans = 0
+    let map = new Map()
+    let backtrack = (start)=>{
+        for(let i = start;i<nums.length;i++){
+            let cur = nums[i]
+            if(map.get(cur)) continue
+            else{
+                ans++
+                let n1 = cur+k
+                // since all n are positive so it does not matter if the res is negative in set
+                let n2 = cur-k
+                map.set(n1,(map.get(n1)??0)+1)
+                map.set(n2,(map.get(n2)??0)+1)
+                backtrack(i+1,map)
+                map.set(n1,(map.get(n1))-1)
+                map.set(n2,(map.get(n2))-1)
+            }
+        }
+    }
+    backtrack(0)
+    return ans
+};
+```
